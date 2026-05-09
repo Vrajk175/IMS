@@ -18,7 +18,7 @@ public class TicketControlller {
 	public String home() {
 		
 		Ticket ticket = new Ticket();
-		ticket.setStatus(Status.NEW);
+		ticket.setStatus("NEW");
 		ticket.setTitle("New Test Ticket 3");
 		
 		service.addTicket(ticket);
@@ -32,17 +32,9 @@ public class TicketControlller {
 		
 		List<Ticket> list = service.findAllTicket();
 		
-		System.out.println("LIST:: "+ list);
+		System.out.println("LIST:: "+ list.toString());
 		return "success";
 	}
 	
-	/*GET - > DB -> controller -> view (Model)
-	 * request.getParamenter("name") -> ticket.setName();
-	 * 
-	 * form Binding
-	 * View Ticket -> controller -> Service -> db
-	 * 
-	 * 
-	 * 
-	 */
+
 }

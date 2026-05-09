@@ -1,11 +1,11 @@
 {
-  "name": "com.example.demo.UserRepo",
+  "name": "com.example.demo.user.UserRepo",
   "module": "JPA",
   "type": "IMPERATIVE",
   "methods": [
     {
       "name": "findByUsernameAndPassword",
-      "signature": "public abstract com.example.demo.User com.example.demo.UserRepo.findByUsernameAndPassword(java.lang.String,java.lang.String)",
+      "signature": "public abstract com.example.demo.user.User com.example.demo.user.UserRepo.findByUsernameAndPassword(java.lang.String,java.lang.String)",
       "query": {
         "query": "SELECT u FROM User u WHERE u.username = :username AND u.password = :password"
       }
