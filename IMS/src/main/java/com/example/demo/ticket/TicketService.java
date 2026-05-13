@@ -9,19 +9,41 @@ import org.springframework.stereotype.Service;
 public class TicketService {
 
 	@Autowired
-	private TicketRepo db;
+	private TicketRepo ticrepo;
 	
 	public List<Ticket> findAllTicket() {
-		return db.findAll();
+		return ticrepo.findAll();
 	}
 	
 	public void addTicket(Ticket ticket) {
-		db.save(ticket);
+		ticrepo.save(ticket);
 	}
 	
-	// updateTicket
+	public Ticket findTicket(long ticket_id) {
+		return ticrepo.findById(ticket_id);
+	}
+	
+	public void changeStatus(long ticket_id,String status) {
+		
+		Ticket oldTicket=ticrepo.findById(ticket_id);
+		
+		if(oldTicket != null) {
+			
+			oldTicket.setStatus(status);
+			
+			ticrepo.save(oldTicket);
+		}
+	}
+	
+	public List<Ticket> showStatus(String status){
+		return ticrepo.findByStatus(status);
+	}
 	
 	
-	// deleteTicket 
+	 public void delTicket(long ticket_id) {
+		  ticrepo.deleteById(ticket_id);
+		  }
+	
+	
 	
 }

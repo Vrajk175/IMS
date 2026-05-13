@@ -11,37 +11,46 @@ public class Ticket {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private long Ticket_id;
 	
-	private String title;
+	private String issue;
 	
-	private String ticketUrl;
+	private String priority;
 	
-	private String status; 
+	private String Ass_to;
 	
+	private String status;
 
-	public long getId() {
-		return id;
+	public long getTicket_id() {
+		return Ticket_id;
 	}
 
-	public void setId(long id) {
-		this.id = id;
+	public void setTicket_id(long ticket_id) {
+		Ticket_id = ticket_id;
 	}
 
-	public String getTitle() {
-		return title;
+	public String getIssue() {
+		return issue;
 	}
 
-	public void setTitle(String title) {
-		this.title = title;
+	public void setIssue(String issue) {
+		this.issue = issue;
 	}
 
-	public String getTicketUrl() {
-		return ticketUrl;
+	public String getPriority() {
+		return priority;
 	}
 
-	public void setTicketUrl(String ticketUrl) {
-		this.ticketUrl = ticketUrl;
+	public void setPriority(String priority) {
+		this.priority = priority;
+	}
+
+	public String getAss_to() {
+		return Ass_to;
+	}
+
+	public void setAss_to(String ass_to) {
+		Ass_to = ass_to;
 	}
 
 	public String getStatus() {
@@ -50,7 +59,10 @@ public class Ticket {
 
 	public void setStatus(String status) {
 		this.status = status;
-	}
+	} 
+	
+
+
 	
 }
 
