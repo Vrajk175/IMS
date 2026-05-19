@@ -23,4 +23,8 @@ public class UserService {
 			return userrepo.findByUsername(username);
 		}
 		
+		public List<User> findByRole(String role) {
+		    return userrepo.findByRole(role);
+		}
+		
 }

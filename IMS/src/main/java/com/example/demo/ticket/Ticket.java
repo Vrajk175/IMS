@@ -1,5 +1,6 @@
 package com.example.demo.ticket;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,7 +18,8 @@ public class Ticket {
 	
 	private String priority;
 	
-	private String Ass_to;
+	@Column(name = "assigned_to")
+	private String assignedTo;
 	
 	private String status;
 
@@ -45,12 +47,14 @@ public class Ticket {
 		this.priority = priority;
 	}
 
-	public String getAss_to() {
-		return Ass_to;
+
+
+	public String getAssignedTo() {
+		return assignedTo;
 	}
 
-	public void setAss_to(String ass_to) {
-		Ass_to = ass_to;
+	public void setAssignedTo(String assignedTo) {
+		this.assignedTo = assignedTo;
 	}
 
 	public String getStatus() {
