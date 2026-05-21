@@ -26,6 +26,10 @@ public class UserController {
 		List<User> users = userservice.findAllUser();
 		
 		model.addAttribute("users", users);
+		
+		model.addAttribute("user", user);
+		model.addAttribute("username", user.getUsername());
+		model.addAttribute("role", user.getRole());
 		return "staff";
 		
 	}

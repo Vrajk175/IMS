@@ -37,9 +37,10 @@ public class TicketControlller {
             return "redirect:/tickets";
         }
 
+       
         model.addAttribute("user", user);
         model.addAttribute("role", user.getRole());
-
+        model.addAttribute("username", user.getUsername());
         return "add-ticket";
     }
 
@@ -93,6 +94,7 @@ public class TicketControlller {
         model.addAttribute("tickets", tickets);
         model.addAttribute("user", user);
         model.addAttribute("role", user.getRole());
+        model.addAttribute("username",user.getUsername());
 
         return "tickets";
     }
@@ -138,6 +140,7 @@ public class TicketControlller {
         model.addAttribute("tickets", tickets);
         model.addAttribute("user", user);
         model.addAttribute("role", user.getRole());
+        model.addAttribute("username", user.getUsername());
 
         return "tickets";
     }
@@ -187,6 +190,8 @@ public class TicketControlller {
         model.addAttribute("ticket", ticket);
         model.addAttribute("user", user);
         model.addAttribute("role", user.getRole());
+        model.addAttribute("username", user.getUsername());
+
 
         return "assign-ticket";
     }

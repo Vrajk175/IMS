@@ -24,7 +24,7 @@ public class Ticket {
 	private String status;
 
 	public long getTicket_id() {
-		return Ticket_id;
+		return Ticket_id=Ticket_id;
 	}
 
 	public void setTicket_id(long ticket_id) {
